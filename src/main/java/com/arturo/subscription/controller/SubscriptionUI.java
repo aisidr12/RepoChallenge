@@ -2,7 +2,6 @@ package com.arturo.subscription.controller;
 
 import com.arturo.subscription.dto.request.SubscriptionRequest;
 import com.arturo.subscription.dto.request.SubscriptionResponse;
-import com.arturo.subscription.entity.SubscriptionEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,5 +20,5 @@ public interface SubscriptionUI {
     ResponseEntity<SubscriptionResponse> getDetailSubscription(SubscriptionRequest request);
 
     @GetMapping("/subscriptions")
-    ResponseEntity<List<SubscriptionEntity>> getSubscriptions();
+    ResponseEntity<List<SubscriptionResponse>> getSubscriptions();
 }

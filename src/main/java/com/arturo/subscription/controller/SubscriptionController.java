@@ -2,11 +2,9 @@ package com.arturo.subscription.controller;
 
 import com.arturo.subscription.dto.request.SubscriptionRequest;
 import com.arturo.subscription.dto.request.SubscriptionResponse;
-import com.arturo.subscription.entity.SubscriptionEntity;
 import com.arturo.subscription.service.SubscriptionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -32,7 +30,7 @@ public class SubscriptionController implements SubscriptionUI {
     }
 
     @Override
-    public ResponseEntity<List<SubscriptionEntity>> getSubscriptions() {
+    public ResponseEntity<List<SubscriptionResponse>> getSubscriptions() {
         return ResponseEntity.ok(subscriptionService.findAll());
     }
 }

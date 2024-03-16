@@ -4,7 +4,6 @@ import lombok.Builder;
 
 @Builder
 public class SubscriptionRequest {
-
     private String email;
     private String firstName;
     private String gender;
